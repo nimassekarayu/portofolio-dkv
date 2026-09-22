@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NIMAS SEKAR AYU - Graphic Designer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#a8b8e8",
+                    "tertiary-fixed-dim": "#a8a698",
+                    "on-secondary-fixed": "#2a2200",
+                    "surface-container-high": "#e7e3d8",
+                    "on-surface-variant": "#5a5c6a",
+                    "text-primary": "#1a1c28",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#EA4335",
+                    "secondary-fixed": "#f0e8d0",
+                    "on-background": "#1a1c28",
+                    "outline": "#8a8c98",
+                    "primary-container": "#0e1d45",
+                    "surface": "#FFFEF7",
+                    "surface-container-low": "#f5f1e9",
+                    "primary-fixed-dim": "#7890c8",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#efece2",
+                    "on-secondary-container": "#6b5a1e",
+                    "on-primary-fixed-variant": "#2e4270",
+                    "background": "#F6F3EC",
+                    "primary": "#142759",
+                    "surface-dim": "#dcd7cc",
+                    "on-tertiary-fixed": "#1a1a14",
+                    "inverse-on-surface": "#f0eee8",
+                    "outline-variant": "#c8c6bc",
+                    "secondary-fixed-dim": "#c8b878",
+                    "on-secondary-fixed-variant": "#6b5a1e",
+                    "success": "#34A853",
+                    "secondary-container": "#f1e7cf",
+                    "on-tertiary-fixed-variant": "#4a483e",
+                    "on-surface": "#1a1c28",
+                    "warning": "#F4B400",
+                    "text-secondary": "#5a5c6a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e4e0d2",
+                    "primary-fixed": "#c0cce8",
+                    "secondary": "#b8963e",
+                    "surface-container-highest": "#e0dbd0",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#5c5a4e",
+                    "inverse-primary": "#7890c8",
+                    "on-primary": "#ffffff",
+                    "border": "#e0dcd0",
+                    "inverse-surface": "#2e3040",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#142759",
+                    "on-primary-fixed": "#081430",
+                    "tertiary-container": "#e4e0d2",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#4a483e",
+                    "surface-variant": "#e0dbd0",
+                    "surface-bright": "#fffdf6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "24px",
+                    "section-gap": "96px",
+                    "max-width": "1280px",
+                    "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "display-xl": [
+                            "Playfair Display"
+                    ],
+                    "display-xl-mobile": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "38px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "45px",
+                            {
+                                    "lineHeight": "52px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-xl": [
+                            "108px",
+                            {
+                                    "lineHeight": "108px",
+                                    "letterSpacing": "-0.03em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-xl-mobile": [
+                            "48px",
+                            {
+                                    "lineHeight": "52px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "25.6px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+        },
+        }
+      }
+    </script>
+<style>
+        html { overflow-x: clip; }
+        .image-hover-zoom {
+            overflow: hidden;
+        }
+        .image-hover-zoom img {
+            transition: transform 0.4s ease-out;
+        }
+        .image-hover-zoom:hover img {
+            transform: scale(1.02);
+        }
+        .overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+        .image-hover-zoom:hover .overlay {
+            opacity: 1;
+        }
+        .image-fade-left {
+            background: linear-gradient(to right, #F6F3EC 0%, #F6F3EC 20%, rgba(246,243,236,0) 100%);
+        }
+        .no-scrollbar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .text-shadow-xl {
+            text-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+        }
+        .lightbox-zoomable {
+            transition: transform 0.2s ease;
+            transform-origin: center;
+        }
+        .carousel-slide {
+            scroll-snap-align: start;
+            aspect-ratio: 4 / 3;
+        }
+        section[id] {
+            scroll-margin-top: 96px;
+        }
+        .star-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee-left 30s linear infinite;
+        }
+        @keyframes marquee-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        @keyframes star-spin {
+            from { rotate: 0deg; }
+            to { rotate: 360deg; }
+        }
+        .star-spin {
+            animation: star-spin 12s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-text-primary font-body-md antialiased overflow-x-hidden selection:bg-secondary selection:text-white min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="bg-background dark:bg-primary sticky top-0 z-50 border-b border-border dark:border-outline-variant w-full px-margin-mobile md:px-margin-desktop py-6 transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center w-full">
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-text-primary dark:text-surface-bright" href="#">NIMAS SEKAR AY<span class="relative inline-block">U
+<div class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[70px] pointer-events-none md:hidden"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+</span></a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-text-secondary dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#works">Works</a>
+<a class="text-text-secondary dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#about">About</a>
+<a class="text-text-secondary dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#contact">Contact</a>
+</div>
+<a id="open-conversation-nav" class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md" href="#contact">Let's Talk</a>
+<button id="mobile-menu-toggle" class="md:hidden text-text-primary">
+<span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+</button>
+</div>
+<div class="fixed inset-0 bg-black/40 z-[55] hidden md:hidden" id="mobile-menu-backdrop"></div>
+<div class="fixed top-0 right-0 h-full w-[70%] max-w-sm bg-surface z-[60] flex flex-col gap-4 px-8 pt-24 transition-transform duration-300 ease-out translate-x-full md:hidden" id="mobile-menu">
+<button class="absolute top-6 right-6 text-text-primary" id="mobile-menu-close" aria-label="Tutup menu"><span class="material-symbols-outlined">close</span></button>
+<a href="#works" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Works</a>
+<a href="#about" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">About</a>
+<a href="#contact" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Contact</a>
+<button id="menu-lets-talk" class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md">Let's Talk</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center min-h-[80vh]">
+<div class="flex flex-col justify-center order-2 lg:order-1 relative z-10">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-none -ml-1 md:-ml-2 mix-blend-multiply relative z-20">
+                    PORTFOLI<span class="relative inline-block">O
+                        <div class="absolute bottom-full left-1/2 translate-x-[calc(-50%+50px)] -translate-y-4 w-[70px] pointer-events-none hidden md:block"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+                    </span>
+                </h1>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mt-4">
+                    NIMAS SEKAR AYU
+                </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-6 max-w-md">
+                    Siswi SMKN 10 Surabaya jurusan Desain Komunikasi Visual (DKV)
+                </p>
+<div class="mt-10">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md group" href="#works">
+                        View Projects 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="absolute top-0 bottom-0 left-0 right-0 -mx-margin-mobile md:-mx-margin-desktop max-w-none -z-10">
+<img alt="NIMAS SEKAR AYU Portrait" class="w-full h-full object-cover rounded-none" src="foto section home.jpeg" style="filter: sepia(0.2) contrast(1.1);"/>
+<div class="absolute inset-0 w-full h-full image-fade-left"></div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-section-gap -z-10 pointer-events-none" style="background: linear-gradient(to bottom, rgba(246,243,236,0) 0%, #FFFEF7 100%);"></div>
+<div class="absolute right-0 bottom-[8%] md:bottom-auto md:top-[35%] translate-x-[25%] rotate-45 w-[140px] z-0 pointer-events-none"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+</section>
+<!-- Ornamen Bintang -->
+<div class="relative z-0 pointer-events-none">
+<div class="absolute top-1/2 left-0 -translate-y-[65%] -translate-x-[25%] -rotate-45 w-[280px] hidden md:block"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+</div>
+<!-- About Section -->
+<section class="bg-background py-section-gap" id="about">
+<div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8">TENTANG SAYA</h2>
+<div class="font-body-md text-body-md text-text-secondary space-y-6">
+<p>
+    Saya adalah siswi Desain Komunikasi Visual (DKV) yang memiliki minat dalam ilustrasi, desain grafis, branding, dan pembuatan konten visual. Saya senang mengembangkan ide menjadi karya yang kreatif, komunikatif, dan memiliki nilai fungsional.
+</p>
+<p>
+    Melalui berbagai proyek, lomba, dan pengalaman PKL, saya terus mengasah kemampuan desain, kreativitas, serta kerja sama tim. Saya percaya bahwa proses belajar dan eksplorasi adalah kunci untuk terus berkembang sebagai seorang desainer.
+</p>
+</div>
+<div class="mt-10">
+<h3 class="font-label-md text-label-md text-text-primary uppercase tracking-widest mb-4">Software</h3>
+<div class="flex flex-wrap gap-3">
+<span class="w-14 h-14 flex items-center justify-center border border-border rounded-full bg-background hover:border-secondary transition-colors duration-150" title="Adobe Illustrator">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-text-secondary"><path d="M10.53 10.73c-.1-.31-.19-.61-.29-.92-.1-.31-.19-.6-.27-.89-.08-.28-.15-.54-.22-.78h-.02c-.09.43-.2.86-.34 1.29-.15.48-.3.98-.46 1.48-.14.51-.29.98-.44 1.4h2.54c-.06-.211-.14-.46-.23-.721-.09-.269-.18-.559-.27-.859zM19.75.3H4.25C1.9.3 0 2.2 0 4.55v14.9c0 2.35 1.9 4.25 4.25 4.25h15.5c2.35 0 4.25-1.9 4.25-4.25V4.55C24 2.2 22.1.3 19.75.3zM14.7 16.83h-2.091c-.069.01-.139-.04-.159-.11l-.82-2.38H7.91l-.76 2.35c-.02.09-.1.15-.19.141H5.08c-.11 0-.14-.061-.11-.18L8.19 7.38c.03-.1.06-.21.1-.33.04-.21.06-.43.06-.65-.01-.05.03-.1.08-.11h2.59c.08 0 .12.03.13.08l3.65 10.3c.03.109 0 .16-.1.16zm3.4-.15c0 .11-.039.16-.129.16H16.01c-.1 0-.15-.061-.15-.16v-7.7c0-.1.041-.14.131-.14h1.98c.09 0 .129.05.129.14v7.7zm-.209-9.03c-.231.24-.571.37-.911.35-.33.01-.65-.12-.891-.35-.23-.25-.35-.58-.34-.92-.01-.34.12-.66.359-.89.242-.23.562-.35.892-.35.391 0 .689.12.91.35.22.24.34.56.33.89.01.34-.11.67-.349.92z"/></svg>
+</span>
+<span class="w-14 h-14 flex items-center justify-center border border-border rounded-full bg-background hover:border-secondary transition-colors duration-150" title="Adobe Photoshop">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-text-secondary"><path d="M9.85 8.42c-.37-.15-.77-.21-1.18-.2-.26 0-.49 0-.68.01-.2-.01-.34 0-.41.01v3.36c.14.01.27.02.39.02h.53c.39 0 .78-.06 1.15-.18.32-.09.6-.28.82-.53.21-.25.31-.59.31-1.03.01-.31-.07-.62-.23-.89-.17-.26-.41-.46-.7-.57zM19.75.3H4.25C1.9.3 0 2.2 0 4.55v14.899c0 2.35 1.9 4.25 4.25 4.25h15.5c2.35 0 4.25-1.9 4.25-4.25V4.55C24 2.2 22.1.3 19.75.3zm-7.391 11.65c-.399.56-.959.98-1.609 1.22-.68.25-1.43.34-2.25.34-.24 0-.4 0-.5-.01s-.24-.01-.43-.01v3.209c.01.07-.04.131-.11.141H5.52c-.08 0-.12-.041-.12-.131V6.42c0-.07.03-.11.1-.11.17 0 .33 0 .56-.01.24-.01.49-.01.76-.02s.56-.01.87-.02c.31-.01.61-.01.91-.01.82 0 1.5.1 2.06.31.5.17.96.45 1.34.82.32.32.57.71.73 1.14.149.42.229.85.229 1.3.001.86-.199 1.57-.6 2.13zm7.091 3.89c-.28.4-.671.709-1.12.891-.49.209-1.09.318-1.811.318-.459 0-.91-.039-1.359-.129-.35-.061-.7-.17-1.02-.32-.07-.039-.121-.109-.111-.189v-1.74c0-.029.011-.07.041-.09.029-.02.06-.01.09.01.39.23.8.391 1.24.49.379.1.779.15 1.18.15.38 0 .65-.051.83-.141.16-.07.27-.24.27-.42 0-.141-.08-.27-.24-.4-.16-.129-.489-.279-.979-.471-.51-.18-.979-.42-1.42-.719-.31-.221-.569-.51-.761-.85-.159-.32-.239-.67-.229-1.021 0-.43.12-.84.341-1.21.25-.4.619-.72 1.049-.92.469-.239 1.059-.349 1.769-.349.41 0 .83.03 1.24.09.3.04.59.12.86.23.039.01.08.05.1.09.01.04.02.08.02.12v1.63c0 .04-.02.08-.05.1-.09.02-.14.02-.18 0-.3-.16-.62-.27-.96-.34-.37-.08-.74-.13-1.12-.13-.2-.01-.41.02-.601.07-.129.03-.24.1-.31.2-.05.08-.08.18-.08.27s.04.18.101.26c.09.11.209.2.34.27.229.12.47.23.709.33.541.18 1.061.43 1.541.73.33.209.6.49.789.83.16.318.24.67.23 1.029.011.471-.129.94-.389 1.331z"/></svg>
+</span>
+<span class="w-14 h-14 flex items-center justify-center border border-border rounded-full bg-background hover:border-secondary transition-colors duration-150" title="Canva">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-text-secondary"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM6.962 7.68c.754 0 1.337.549 1.405 1.2.069.583-.171 1.097-.822 1.406-.343.171-.48.172-.549.069-.034-.069 0-.137.069-.206.617-.514.617-.926.548-1.508-.034-.378-.308-.618-.583-.618-1.2 0-2.914 2.674-2.674 4.629.103.754.549 1.646 1.509 1.646.308 0 .65-.103.96-.24.5-.264.799-.47 1.097-.8-.073-.885.704-2.046 1.851-2.046.515 0 .926.205.96.583.068.514-.377.582-.514.582s-.378-.034-.378-.17c-.034-.138.309-.07.275-.378-.035-.206-.24-.274-.446-.274-.72 0-1.131.994-1.029 1.611.035.275.172.549.447.549.205 0 .514-.31.617-.755.068-.308.343-.514.583-.514.102 0 .17.034.205.171v.138c-.034.137-.137.548-.102.651 0 .069.034.171.17.171.092 0 .436-.18.777-.459.117-.59.253-1.298.253-1.357.034-.24.137-.48.617-.48.103 0 .171.034.205.171v.138l-.136.617c.445-.583 1.097-.994 1.508-.994.172 0 .309.102.309.274 0 .103 0 .274-.069.446-.137.377-.309.96-.412 1.474 0 .137.035.274.207.274.171 0 .685-.206 1.096-.754l.007-.004c-.002-.068-.007-.134-.007-.202 0-.411.035-.754.104-.994.068-.274.411-.514.617-.514.103 0 .205.069.205.171 0 .035 0 .103-.034.137-.137.446-.24.857-.24 1.269 0 .24.034.582.102.788 0 .034.035.069.07.069.068 0 .548-.445.89-1.028-.308-.206-.48-.549-.48-.96 0-.72.446-1.097.858-1.097.343 0 .617.24.617.72 0 .308-.103.65-.274.96h.102a.77.77 0 0 0 .584-.24.293.293 0 0 1 .134-.117c.335-.425.83-.74 1.41-.74.48 0 .924.205.959.582.068.515-.378.618-.515.618l-.002-.002c-.138 0-.377-.035-.377-.172 0-.137.309-.068.274-.376-.034-.206-.24-.275-.446-.275-.686 0-1.13.891-1.028 1.611.034.275.171.583.445.583.206 0 .515-.308.652-.754.068-.274.343-.514.583-.514.103 0 .17.034.205.171 0 .069 0 .206-.137.652-.17.308-.171.48-.137.617.034.274.171.48.309.583.034.034.068.102.068.102 0 .069-.034.138-.137.138-.034 0-.068 0-.103-.035-.514-.205-.72-.548-.789-.891-.205.24-.445.377-.72.377-.445 0-.89-.411-.96-.926a1.609 1.609 0 0 1 .075-.649c-.203.13-.422.203-.623.203h-.17c-.447.652-.927 1.098-1.27 1.303a.896.896 0 0 1-.377.104c-.068 0-.171-.035-.205-.104-.095-.152-.156-.392-.193-.667-.481.527-1.145.805-1.453.805-.343 0-.548-.206-.582-.55v-.376c.102-.754.377-1.2.377-1.337a.074.074 0 0 0-.069-.07c-.24 0-1.028.824-1.166 1.373l-.103.445c-.068.309-.377.515-.582.515-.103 0-.172-.035-.206-.172v-.137l.046-.233c-.435.31-.87.508-1.075.508-.308 0-.48-.172-.514-.412-.206.274-.445.412-.754.412-.352 0-.696-.24-.862-.593-.244.275-.523.553-.852.764-.48.309-1.028.549-1.68.549-.582 0-1.097-.309-1.371-.583-.412-.377-.651-.96-.686-1.509-.205-1.68.823-3.84 2.4-4.8.378-.205.755-.343 1.132-.343zm9.77 3.291c-.104 0-.172.172-.172.343 0 .274.137.583.309.755a1.74 1.74 0 0 0 .102-.583c0-.343-.137-.515-.24-.515z"/></svg>
+</span>
+<span class="w-14 h-14 flex items-center justify-center border border-border rounded-full bg-background hover:border-secondary transition-colors duration-150" title="CapCut">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-text-secondary"><path d="M24.189 6.442V2.671l-4.535 2.383V4.91c.002-1.505-1.078-2.411-2.638-2.411H2.64C.993 2.5 0 3.407 0 4.91V8.72L6.354 12 0 15.316v3.8C0 20.595 1 21.5 2.64 21.5h14.373c1.56 0 2.639-.907 2.639-2.382v-.197l4.536 2.409v-3.828L13.64 12 24.19 6.443zM9.982 13.873l7.797 4.083H2.157l7.825-4.083zm7.741-7.828l-7.742 4.057-7.825-4.057h15.567z"/></svg>
+</span>
+<span class="w-14 h-14 flex items-center justify-center border border-border rounded-full bg-background hover:border-secondary transition-colors duration-150" title="Blender">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-text-secondary"><path d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626"/></svg>
+</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 h-auto lg:h-[600px] relative">
+<div class="flex flex-col gap-4 h-full">
+<div class="h-2/3 bg-background relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-contain" src="section%20about%20me/gambar%202%20section%20about%20me.jpg"/>
+</div>
+<div class="h-1/3 bg-primary-container relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center p-6 text-on-primary-container font-headline-lg text-headline-lg-mobile text-center">
+                               Design is Intention.
+                           </div>
+</div>
+</div>
+<div class="flex flex-col gap-4 h-full lg:pt-20">
+<div class="h-1/3 bg-surface-dim relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20about%20me/gambar%203%20section%20about%20me.png"/>
+</div>
+<div class="h-2/3 bg-background relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20about%20me/gambar%201%20section%20about%20me.jpeg"/>
+</div>
+</div>
+<div class="absolute -bottom-[250px] left-1/2 -translate-x-1/2 rotate-45 w-[140px] z-[60] pointer-events-none"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+</div>
+
+</div>
+</section>
+<!-- Featured Works Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="works">
+<div class="relative md:-mx-margin-desktop bg-primary py-8 mb-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop">
+<div class="mb-12 flex justify-between items-end">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white">KARYA</h2>
+</div>
+<div class="mb-16 flex flex-wrap gap-3 justify-center">
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#nirmana">Nirmana</a>
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#ilustrasi">Ilustrasi</a>
+
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#fotografi">Fotografi</a>
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#3d-model">3D Model</a>
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#poster">Poster</a>
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#logo">Logo</a>
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#mockup">Mockup</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-section-gap">
+<!-- Section Nirmana -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="nirmana">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">NIRMANA</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/1.jpeg" alt="Nirmana 1"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/2.jpeg" alt="Nirmana 2"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/3.jpeg" alt="Nirmana 3"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/4.jpeg" alt="Nirmana 4"/>
+</div>
+</div>
+</section>
+<!-- Section Ilustrasi -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="ilustrasi">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">ILUSTRASI</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/1.jpeg" alt="Ilustrasi 1"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/2.jpeg" alt="Ilustrasi 2"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/3.jpeg" alt="Ilustrasi 3"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/4.jpg" alt="Ilustrasi 4"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/5.png" alt="Ilustrasi 5"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/6.jpg" alt="Ilustrasi 6"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/7.jpg" alt="Ilustrasi 7"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/8.png" alt="Ilustrasi 8"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/9.jpeg" alt="Ilustrasi 9"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/10.jpeg" alt="Ilustrasi 10"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/11.jpeg" alt="Ilustrasi 11"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/12.jpeg" alt="Ilustrasi 12"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/13.jpeg" alt="Ilustrasi 13"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/14.jpeg" alt="Ilustrasi 14"/>
+</div>
+</div>
+</section>
+<!-- Section Fotografi -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="fotografi">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">FOTOGRAFI</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/1.jpeg" alt="Fotografi 1"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/2.jpeg" alt="Fotografi 2"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/3.jpeg" alt="Fotografi 3"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/4.jpeg" alt="Fotografi 4"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/5.jpeg" alt="Fotografi 5"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/6.jpeg" alt="Fotografi 6"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/7.jpeg" alt="Fotografi 7"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/8.jpeg" alt="Fotografi 8"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/9.jpg" alt="Fotografi 9"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/10.jpg" alt="Fotografi 10"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/11.JPG" alt="Fotografi 11"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/12.jpg" alt="Fotografi 12"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/13.jpg" alt="Fotografi 13"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/14.jpg" alt="Fotografi 14"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/15.jpg" alt="Fotografi 15"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/16.jpg" alt="Fotografi 16"/>
+</div>
+</div>
+</section>
+<!-- Section 3D Model -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="3d-model">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">3D MODEL</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/3d%20modeling/1.jpeg" alt="3D Model 1"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/3d%20modeling/2.png" alt="3D Model 2"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/3d%20modeling/3.png" alt="3D Model 3"/>
+</div>
+</div>
+</section>
+<!-- Section Poster -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="poster">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">POSTER</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/1.jpg" alt="Poster 1"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/2.jpeg" alt="Poster 2"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/3.jpeg" alt="Poster 3"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/4.jpeg" alt="Poster 4"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/5.jpeg" alt="Poster 5"/>
+</div>
+</div>
+</section>
+<!-- Section Logo -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="logo">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">LOGO</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/1.png" alt="Logo 1"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/2.png" alt="Logo 2"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/3.png" alt="Logo 3"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/4.png" alt="Logo 4"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/5.png" alt="Logo 5"/>
+</div>
+</div>
+</section>
+<!-- Section Mockup -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="mockup">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">MOCKUP</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/1.png" alt="Mockup 1"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/2.png" alt="Mockup 2"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/3.png" alt="Mockup 3"/>
+</div>
+</div>
+</section>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-section-gap px-margin-mobile md:px-margin-desktop text-center bg-primary border-t border-primary" id="contact">
+<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-8 max-w-4xl mx-auto leading-tight text-shadow-xl">
+                Let's create something amazing together.
+            </h2>
+<p class="font-body-md text-body-md text-white/80 mb-10 max-w-xl mx-auto">
+                Hubungi saya untuk mendiskusikan ide besar Anda berikutnya.
+            </p>
+<button id="open-conversation" class="inline-flex items-center justify-center bg-[#f2c648] text-[#142759] px-10 py-5 rounded shadow-xl shadow-black/30 hover:opacity-90 transition-opacity duration-150 font-label-md text-label-md text-lg">
+                Let's Talk
+            </button>
+<div class="absolute right-0 top-0 -translate-y-1/2 md:top-1/2 md:-translate-y-[65%] translate-x-[25%] rotate-45 w-[140px] md:w-[280px] pointer-events-none"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface dark:bg-surface-container-lowest border-t border-border dark:border-outline-variant full-width bottom w-full px-margin-mobile md:px-margin-desktop py-section-gap transition-all duration-150 ease-out flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="w-full flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-headline-lg text-headline-lg text-text-primary dark:text-on-surface">
+                NIMAS SEKAR AYU
+            </div>
+<div class="font-body-md text-body-md text-text-primary dark:text-on-surface text-center md:text-right">
+                © 2026 NIMAS SEKAR AYU. Designed with intention.
+            </div>
+</div>
+</footer>
+<div class="fixed inset-0 bg-primary/80 backdrop-blur-md flex items-center justify-center p-6 hidden overflow-hidden" id="lightbox">
+<button class="absolute top-6 right-6 text-on-primary text-4xl leading-none" id="lightbox-close" aria-label="Tutup"><span class="material-symbols-outlined">close</span></button>
+<img class="lightbox-zoomable max-w-[80vw] max-h-[70vh] object-contain rounded-lg cursor-zoom-in" id="lightbox-img" alt="Preview"/>
+<div class="absolute bottom-6 right-6 flex gap-2 z-10">
+<button class="bg-white/20 text-white px-3 py-2 rounded text-xl leading-none" id="zoom-in" aria-label="Perbesar">+</button>
+<button class="bg-white/20 text-white px-3 py-2 rounded text-xl leading-none" id="zoom-out" aria-label="Perkecil">-</button>
+<button class="bg-white/20 text-white px-3 py-2 rounded text-sm leading-none" id="zoom-reset">Reset</button>
+</div>
+</div>
+<!-- Conversation Modal -->
+<div class="fixed inset-0 bg-primary/80 backdrop-blur-md flex items-center justify-center p-6 hidden z-50" id="conversation-modal">
+<div class="bg-surface rounded-xl max-w-md w-full p-8 shadow-2xl">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Let's talk.</h3>
+<form id="conversation-form" class="flex flex-col gap-4">
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-1" for="conv-nama">Nama</label>
+<input class="w-full border border-border rounded-lg bg-background px-4 py-3 font-body-md text-body-md text-text-primary focus:outline-none focus:ring-2 focus:ring-secondary" type="text" id="conv-nama" name="nama" required/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-1" for="conv-instansi">Instansi</label>
+<input class="w-full border border-border rounded-lg bg-background px-4 py-3 font-body-md text-body-md text-text-primary focus:outline-none focus:ring-2 focus:ring-secondary" type="text" id="conv-instansi" name="instansi"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-1" for="conv-email">Email</label>
+<input class="w-full border border-border rounded-lg bg-background px-4 py-3 font-body-md text-body-md text-text-primary focus:outline-none focus:ring-2 focus:ring-secondary" type="email" id="conv-email" name="email" required/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-1" for="conv-pesan">Pesan</label>
+<textarea class="w-full border border-border rounded-lg bg-background px-4 py-3 font-body-md text-body-md text-text-primary focus:outline-none focus:ring-2 focus:ring-secondary" id="conv-pesan" name="pesan" rows="4" required></textarea>
+</div>
+<div class="flex gap-3 justify-end">
+<button class="px-6 py-3 rounded border border-border bg-transparent text-text-primary hover:bg-background transition-colors duration-150 font-label-md text-label-md" type="button" id="close-conversation">Batal</button>
+<button class="px-6 py-3 rounded bg-[#f2c648] text-[#142759] hover:opacity-90 transition-opacity duration-150 font-label-md text-label-md" type="submit">Kirim</button>
+</div>
+</form>
+</div>
+</div>
+<script>
+        // Simple navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.classList.replace('py-6', 'py-4');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.replace('py-4', 'py-6');
+            }
+        });
+        // Carousel auto-scroll: duplicate slides if needed, move right while hovered, loop seamlessly
+        document.querySelectorAll('.carousel-track').forEach((track) => {
+            const section = track.closest('section');
+            const prevBtn = section.querySelector('.carousel-prev');
+            const nextBtn = section.querySelector('.carousel-next');
+            const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+            if (slides.length === 0) return;
+            const gap = 24;
+            slides.forEach((s) => track.appendChild(s.cloneNode(true)));
+            const unitWidth = track.children[slides.length].offsetLeft - track.children[0].offsetLeft;
+            while (track.scrollWidth - track.clientWidth < unitWidth) {
+                slides.forEach((s) => track.appendChild(s.cloneNode(true)));
+            }
+            let playing = false;
+            let manualPause = false;
+            let resumeTimer = null;
+            function pauseManual() {
+                manualPause = true;
+                clearTimeout(resumeTimer);
+                resumeTimer = setTimeout(() => { manualPause = false; }, 3000);
+            }
+            function slideTo(dir) {
+                const step = slides[0].getBoundingClientRect().width + gap;
+                track.scrollBy({ left: step * dir, behavior: 'smooth' });
+                pauseManual();
+            }
+            prevBtn.addEventListener('click', () => slideTo(-1));
+            nextBtn.addEventListener('click', () => slideTo(1));
+            track.addEventListener('mouseenter', () => { playing = true; });
+            track.addEventListener('mouseleave', () => { playing = false; });
+            track.addEventListener('click', (e) => {
+                if (e.target.closest('.carousel-slide')) pauseManual();
+            });
+            function tick() {
+                if (playing && !manualPause && !document.body.classList.contains('lightbox-open') && unitWidth > 0) {
+                    track.scrollLeft = (track.scrollLeft + 1) % unitWidth;
+                }
+                requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        });
+        // Lightbox - show full image when a slide is clicked (delegation covers duplicated slides)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        let scale = 1;
+        function setZoom(value) {
+            scale = Math.min(5, Math.max(1, value));
+            lightboxImg.style.transform = scale === 1 ? '' : 'scale(' + scale + ')';
+        }
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || 'Preview';
+            setZoom(1);
+            lightbox.classList.remove('hidden');
+            document.body.classList.add('lightbox-open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            setZoom(1);
+            lightbox.classList.add('hidden');
+            document.body.classList.remove('lightbox-open');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('click', (e) => {
+            const slide = e.target.closest('.carousel-slide');
+            if (slide) {
+                const img = slide.querySelector('img');
+                if (img) openLightbox(img.src, img.alt);
+            }
+        });
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        document.getElementById('zoom-in').addEventListener('click', () => setZoom(scale + 0.25));
+        document.getElementById('zoom-out').addEventListener('click', () => setZoom(scale - 0.25));
+        document.getElementById('zoom-reset').addEventListener('click', () => setZoom(1));
+        lightboxImg.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            setZoom(scale + (e.deltaY < 0 ? 0.25 : -0.25));
+        }, { passive: false });
+        lightboxImg.addEventListener('dblclick', () => setZoom(scale > 1 ? 1 : 2));
+        // Conversation modal - open/close
+        const conversationModal = document.getElementById('conversation-modal');
+        function openConversation() {
+            conversationModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeConversation() {
+            conversationModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('open-conversation').addEventListener('click', openConversation);
+        document.getElementById('open-conversation-nav').addEventListener('click', (e) => {
+            e.preventDefault();
+            openConversation();
+        });
+        // Mobile menu toggle - slide-in drawer from right
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+        const MOBILE_OPEN = 'translate-x-0';
+        const MOBILE_CLOSED = 'translate-x-full';
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle(MOBILE_OPEN, open);
+            mobileMenu.classList.toggle(MOBILE_CLOSED, !open);
+            mobileMenuBackdrop.classList.toggle('hidden', !open);
+            mobileMenuIcon.textContent = open ? 'close' : 'menu';
+        }
+        function toggleMobileMenu() {
+            setMobileMenu(mobileMenu.classList.contains(MOBILE_CLOSED));
+        }
+        document.getElementById('mobile-menu-toggle').addEventListener('click', toggleMobileMenu);
+        document.getElementById('mobile-menu-close').addEventListener('click', () => setMobileMenu(false));
+        mobileMenuBackdrop.addEventListener('click', () => setMobileMenu(false));
+        mobileMenu.querySelectorAll('.mobile-menu-link').forEach((link) => {
+            link.addEventListener('click', () => setMobileMenu(false));
+        });
+        document.getElementById('menu-lets-talk').addEventListener('click', () => {
+            setMobileMenu(false);
+            openConversation();
+        });
+        document.getElementById('close-conversation').addEventListener('click', closeConversation);
+        conversationModal.addEventListener('click', (e) => {
+            if (e.target === conversationModal) closeConversation();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !conversationModal.classList.contains('hidden')) closeConversation();
+        });
+        // Conversation form - build mailto and open email app
+        document.getElementById('conversation-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nama = document.getElementById('conv-nama').value.trim();
+            const instansi = document.getElementById('conv-instansi').value.trim();
+            const email = document.getElementById('conv-email').value.trim();
+            const pesan = document.getElementById('conv-pesan').value.trim();
+            const subject = 'Conversation dari ' + (nama || 'Pengunjung');
+            const body =
+                'Nama: ' + nama + '\n' +
+                'Instansi: ' + (instansi || '-') + '\n' +
+                'Email: ' + email + '\n\n' +
+                'Pesan:\n' + pesan;
+            const mailto = 'mailto:nimassekarayu358@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+            closeConversation();
+            document.getElementById('conversation-form').reset();
+        });
+    </script>
+</body></html>
