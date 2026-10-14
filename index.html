@@ -152,6 +152,7 @@
     </script>
 <style>
         html { overflow-x: clip; }
+        main { overflow-x: hidden; }
         .image-hover-zoom {
             overflow: hidden;
         }
@@ -225,18 +226,20 @@
 <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
 </button>
 </div>
-<div class="fixed inset-0 bg-black/40 z-[55] hidden md:hidden" id="mobile-menu-backdrop"></div>
-<div class="fixed top-0 right-0 h-full w-[70%] max-w-sm bg-surface z-[60] flex flex-col gap-4 px-8 pt-24 transition-transform duration-300 ease-out translate-x-full md:hidden" id="mobile-menu">
+<div class="fixed inset-0 overflow-hidden z-[60] pointer-events-none md:hidden" id="mobile-menu-wrap">
+<div class="absolute inset-0 bg-black/40 hidden pointer-events-auto" id="mobile-menu-backdrop"></div>
+<div class="absolute top-0 right-0 h-full w-[70%] max-w-sm bg-surface flex flex-col gap-4 px-8 pt-24 transition-transform duration-300 ease-out translate-x-full pointer-events-auto" id="mobile-menu">
 <button class="absolute top-6 right-6 text-text-primary" id="mobile-menu-close" aria-label="Tutup menu"><span class="material-symbols-outlined">close</span></button>
 <a href="#works" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Works</a>
 <a href="#about" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">About</a>
 <a href="#contact" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Contact</a>
 <button id="menu-lets-talk" class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md">Let's Talk</button>
 </div>
+</div>
 </nav>
 <main class="flex-grow">
 <!-- Hero Section -->
-<section class="relative px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center min-h-[80vh]">
+<section class="relative px-margin-mobile md:px-margin-desktop py-14 md:py-section-gap grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center min-h-[80vh]">
 <div class="flex flex-col justify-center order-2 lg:order-1 relative z-10">
 <h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-none -ml-1 md:-ml-2 mix-blend-multiply relative z-20">
                     PORTFOLI<span class="relative inline-block">O
@@ -257,11 +260,11 @@
 </a>
 </div>
 </div>
-<div class="absolute top-0 bottom-0 left-0 right-0 -mx-margin-mobile md:-mx-margin-desktop max-w-none -z-10">
+<div class="absolute top-0 bottom-0 left-0 right-0 max-w-none -z-10">
 <img alt="NIMAS SEKAR AYU Portrait" class="w-full h-full object-cover rounded-none" src="foto section home.jpeg" style="filter: sepia(0.2) contrast(1.1);"/>
 <div class="absolute inset-0 w-full h-full image-fade-left"></div>
 </div>
-<div class="absolute bottom-0 left-0 right-0 h-section-gap -z-10 pointer-events-none" style="background: linear-gradient(to bottom, rgba(246,243,236,0) 0%, #FFFEF7 100%);"></div>
+<div class="absolute bottom-0 left-0 right-0 h-14 md:h-section-gap -z-10 pointer-events-none" style="background: linear-gradient(to bottom, rgba(246,243,236,0) 0%, #FFFEF7 100%);"></div>
 <div class="absolute right-0 bottom-[8%] md:bottom-auto md:top-[35%] translate-x-[25%] rotate-45 w-[140px] z-0 pointer-events-none"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
 </section>
 <!-- Ornamen Bintang -->
@@ -269,7 +272,7 @@
 <div class="absolute top-1/2 left-0 -translate-y-[65%] -translate-x-[25%] -rotate-45 w-[280px] hidden md:block"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
 </div>
 <!-- About Section -->
-<section class="bg-background py-section-gap" id="about">
+<section class="bg-background py-14 md:py-section-gap" id="about">
 <div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div>
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8">TENTANG SAYA</h2>
@@ -327,8 +330,8 @@
 </div>
 </section>
 <!-- Featured Works Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="works">
-<div class="relative md:-mx-margin-desktop bg-primary py-8 mb-section-gap">
+<section class="py-14 md:py-section-gap" id="works">
+<div class="relative bg-primary py-8 mb-14 md:mb-section-gap">
 <div class="px-margin-mobile md:px-margin-desktop">
 <div class="mb-12 flex justify-between items-end">
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white">KARYA</h2>
@@ -345,7 +348,7 @@
 </div>
 </div>
 </div>
-<div class="flex flex-col gap-section-gap">
+<div class="flex flex-col gap-14 md:gap-section-gap">
 <!-- Section Nirmana -->
 <section class="px-margin-mobile md:px-margin-desktop w-full" id="nirmana">
 <div class="mb-4 md:mb-8 flex justify-between items-center">
@@ -356,16 +359,16 @@
 </div>
 </div>
 <div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/1.jpeg" alt="Nirmana 1"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/2.jpeg" alt="Nirmana 2"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/3.jpeg" alt="Nirmana 3"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/nirmana/4.jpeg" alt="Nirmana 4"/>
 </div>
 </div>
@@ -380,46 +383,46 @@
 </div>
 </div>
 <div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/1.jpeg" alt="Ilustrasi 1"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/2.jpeg" alt="Ilustrasi 2"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/3.jpeg" alt="Ilustrasi 3"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/4.jpg" alt="Ilustrasi 4"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/5.png" alt="Ilustrasi 5"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/6.jpg" alt="Ilustrasi 6"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/7.jpg" alt="Ilustrasi 7"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/8.png" alt="Ilustrasi 8"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/9.jpeg" alt="Ilustrasi 9"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/10.jpeg" alt="Ilustrasi 10"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/11.jpeg" alt="Ilustrasi 11"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/12.jpeg" alt="Ilustrasi 12"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/13.jpeg" alt="Ilustrasi 13"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/14.jpeg" alt="Ilustrasi 14"/>
 </div>
 </div>
@@ -434,52 +437,52 @@
 </div>
 </div>
 <div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/1.jpeg" alt="Fotografi 1"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/2.jpeg" alt="Fotografi 2"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/3.jpeg" alt="Fotografi 3"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/4.jpeg" alt="Fotografi 4"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/5.jpeg" alt="Fotografi 5"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/6.jpeg" alt="Fotografi 6"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/7.jpeg" alt="Fotografi 7"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/8.jpeg" alt="Fotografi 8"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/9.jpg" alt="Fotografi 9"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/10.jpg" alt="Fotografi 10"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/11.JPG" alt="Fotografi 11"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/12.jpg" alt="Fotografi 12"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/13.jpg" alt="Fotografi 13"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/14.jpg" alt="Fotografi 14"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/15.jpg" alt="Fotografi 15"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/fotografi/16.jpg" alt="Fotografi 16"/>
 </div>
 </div>
@@ -494,13 +497,13 @@
 </div>
 </div>
 <div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/3d%20modeling/1.jpeg" alt="3D Model 1"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/3d%20modeling/2.png" alt="3D Model 2"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/3d%20modeling/3.png" alt="3D Model 3"/>
 </div>
 </div>
@@ -515,19 +518,19 @@
 </div>
 </div>
 <div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/1.jpg" alt="Poster 1"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/2.jpeg" alt="Poster 2"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/3.jpeg" alt="Poster 3"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/4.jpeg" alt="Poster 4"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/5.jpeg" alt="Poster 5"/>
 </div>
 </div>
@@ -542,19 +545,19 @@
 </div>
 </div>
 <div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/1.png" alt="Logo 1"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/2.png" alt="Logo 2"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/3.png" alt="Logo 3"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/4.png" alt="Logo 4"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/logo/5.png" alt="Logo 5"/>
 </div>
 </div>
@@ -569,13 +572,13 @@
 </div>
 </div>
 <div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/1.png" alt="Mockup 1"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/2.png" alt="Mockup 2"/>
 </div>
-<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/3.png" alt="Mockup 3"/>
 </div>
 </div>
@@ -583,7 +586,7 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="relative py-section-gap px-margin-mobile md:px-margin-desktop text-center bg-primary border-t border-primary" id="contact">
+<section class="relative py-14 md:py-section-gap px-margin-mobile md:px-margin-desktop text-center bg-primary border-t border-primary" id="contact">
 <h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-8 max-w-4xl mx-auto leading-tight text-shadow-xl">
                 Let's create something amazing together.
             </h2>
@@ -597,7 +600,7 @@
 </section>
 </main>
 <!-- Footer Component -->
-<footer class="bg-surface dark:bg-surface-container-lowest border-t border-border dark:border-outline-variant full-width bottom w-full px-margin-mobile md:px-margin-desktop py-section-gap transition-all duration-150 ease-out flex flex-col md:flex-row justify-between items-center gap-8">
+<footer class="bg-surface dark:bg-surface-container-lowest border-t border-border dark:border-outline-variant full-width bottom w-full px-margin-mobile md:px-margin-desktop py-14 md:py-section-gap transition-all duration-150 ease-out flex flex-col md:flex-row justify-between items-center gap-8">
 <div class="w-full flex flex-col md:flex-row justify-between items-center gap-8">
 <div class="font-headline-lg text-headline-lg text-text-primary dark:text-on-surface">
                 NIMAS SEKAR AYU
