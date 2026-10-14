@@ -212,7 +212,7 @@
 </head>
 <body class="bg-background text-text-primary font-body-md antialiased selection:bg-secondary selection:text-white min-h-screen flex flex-col">
 <!-- TopNavBar Component -->
-<nav class="bg-text-primary dark:bg-primary sticky top-0 z-50 border-b border-white/10 dark:border-outline-variant w-full px-margin-mobile md:px-margin-desktop py-6 transition-all duration-300" id="navbar">
+<nav class="bg-primary dark:bg-primary sticky top-0 z-50 border-b border-white/10 dark:border-outline-variant w-full px-margin-mobile md:px-margin-desktop py-6 transition-all duration-300" id="navbar">
 <div class="flex justify-between items-center w-full">
 <a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-background dark:text-surface-bright" href="#">NIMAS SEKAR AYU</a>
 <div class="hidden md:flex gap-8 items-center">
@@ -671,8 +671,10 @@
                 slides.forEach((s) => track.appendChild(s.cloneNode(true)));
             }
             let playing = isMobile;
+            let pos = track.scrollLeft;
             let manualPause = false;
             let resumeTimer = null;
+            const speed = 0.4;
             function pauseManual() {
                 manualPause = true;
                 clearTimeout(resumeTimer);
@@ -691,9 +693,13 @@
             track.addEventListener('click', (e) => {
                 if (e.target.closest('.carousel-slide')) pauseManual();
             });
+            track.addEventListener('scroll', () => {
+                if (Math.abs(track.scrollLeft - (pos % unitWidth)) > 2) pos = track.scrollLeft;
+            });
             function tick() {
                 if (playing && !manualPause && !document.body.classList.contains('lightbox-open') && unitWidth > 0) {
-                    track.scrollLeft = (track.scrollLeft + 1) % unitWidth;
+                    pos += speed;
+                    track.scrollLeft = pos % unitWidth;
                 }
                 requestAnimationFrame(tick);
             }
