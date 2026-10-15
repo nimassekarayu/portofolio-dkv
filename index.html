@@ -170,7 +170,7 @@
             opacity: 1;
         }
         .image-fade-left {
-            background: linear-gradient(to right, #F6F3EC 0%, #F6F3EC 20%, rgba(246,243,236,0) 100%);
+            background: linear-gradient(to right, #F6F3EC 0%, #F6F3EC 20%, rgba(246,243,236,0) 50%);
         }
         .no-scrollbar {
             scrollbar-width: none;
@@ -217,11 +217,11 @@
 <div class="flex justify-between items-center w-full">
 <a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-background dark:text-surface-bright" href="#">NIMAS SEKAR AYU</a>
 <div class="hidden md:flex gap-8 items-center">
-<a class="text-background/70 dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#works">Works</a>
-<a class="text-background/70 dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#about">About</a>
-<a class="text-background/70 dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#contact">Contact</a>
+<a class="text-background/70 dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#about">Tentang Saya</a>
+<a class="text-background/70 dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#works">Karya</a>
+<a class="text-background/70 dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md" href="#contact">Kontak</a>
 </div>
-<a id="open-conversation-nav" class="hidden md:inline-flex items-center justify-center bg-background text-text-primary px-6 py-3 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md" href="#contact">Let's Talk</a>
+<a id="open-conversation-nav" class="hidden md:inline-flex items-center justify-center bg-background text-text-primary px-6 py-3 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md" href="#contact">Mari Berbincang</a>
 <button id="mobile-menu-toggle" class="md:hidden text-background">
 <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
 </button>
@@ -230,10 +230,10 @@
 <div class="absolute inset-0 bg-black/40 hidden pointer-events-auto" id="mobile-menu-backdrop"></div>
 <div class="absolute top-0 right-0 h-full w-[70%] max-w-sm bg-surface flex flex-col gap-4 px-8 pt-24 transition-transform duration-300 ease-out translate-x-full pointer-events-auto" id="mobile-menu">
 <button class="absolute top-6 right-6 text-text-primary" id="mobile-menu-close" aria-label="Tutup menu"><span class="material-symbols-outlined">close</span></button>
-<a href="#works" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Works</a>
-<a href="#about" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">About</a>
-<a href="#contact" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Contact</a>
-<button id="menu-lets-talk" class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md">Let's Talk</button>
+<a href="#about" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Tentang Saya</a>
+<a href="#works" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Karya</a>
+<a href="#contact" class="mobile-menu-link text-text-secondary hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 font-label-md text-label-md">Kontak</a>
+<button id="menu-lets-talk" class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md">Mari Berbincang</button>
 </div>
 </div>
 </nav>
@@ -251,28 +251,30 @@
                     NIMAS SEKAR AYU
                 </h2>
 <p class="font-body-md text-body-md text-text-secondary mt-6 max-w-md">
-                    Siswi SMKN 10 Surabaya jurusan Desain Komunikasi Visual (DKV)
+                    Siswi SMKN 10 Surabaya jurusan Desain Komunikasi Visual&nbsp;(DKV)
                 </p>
 <div class="mt-10 hidden lg:block">
 <a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md group" href="#works">
-                        View Projects 
+                        Liat Karya 
                         <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
 </div>
 </div>
 <div class="relative order-2 max-w-none -mx-[24px] w-[calc(100%_+_48px)] -mt-[calc(20vw_-_10px)] md:mt-0 lg:mx-0 lg:w-full lg:absolute lg:inset-0 lg:order-none lg:-z-10">
 <img alt="NIMAS SEKAR AYU Portrait" class="w-full h-auto lg:h-full object-cover rounded-none" src="foto section home.jpeg" style="filter: sepia(0.2) contrast(1.1);"/>
+<div class="lg:hidden w-full pointer-events-none aspect-[2028/159]" style="background-image:url('ornamen renda.png'); background-repeat:repeat-x; background-size:calc(100% / 1.5) auto;"></div>
 <div class="md:hidden absolute top-0 left-0 right-0 h-1/3 pointer-events-none" style="background: linear-gradient(to bottom, rgba(246,243,236,1) 0%, rgba(246,243,236,0.92) 40%, rgba(246,243,236,0.55) 72%, rgba(246,243,236,0) 100%);"></div>
 <div class="hidden lg:block absolute inset-0 w-full h-full image-fade-left"></div>
 </div>
 <div class="order-3 lg:hidden mt-10">
 <a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded hover:bg-secondary transition-colors duration-150 font-label-md text-label-md group" href="#works">
-                        View Projects 
+                        Liat Karya 
                         <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
 </div>
 <div class="hidden lg:block absolute bottom-0 left-0 right-0 h-14 md:h-section-gap -z-10 pointer-events-none" style="background: linear-gradient(to bottom, rgba(246,243,236,0) 0%, #FFFEF7 100%);"></div>
 <div class="absolute right-0 bottom-[42%] md:bottom-auto md:top-[35%] translate-x-0 md:translate-x-[25%] rotate-45 w-[140px] z-10 pointer-events-none hidden md:block"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+<div class="hidden lg:flex absolute bottom-0 left-0 right-0 pointer-events-none z-0"><img class="w-1/3 h-auto shrink-0" src="ornamen renda.png" alt=""/><img class="w-1/3 h-auto shrink-0" src="ornamen renda.png" alt=""/><img class="w-1/3 h-auto shrink-0" src="ornamen renda.png" alt=""/></div>
 </section>
 <!-- Ornamen Bintang -->
 <div class="relative z-0 pointer-events-none">
@@ -289,6 +291,12 @@
 </p>
 <p>
     Melalui berbagai proyek, lomba, dan pengalaman PKL, saya terus mengasah kemampuan desain, kreativitas, serta kerja sama tim. Saya percaya bahwa proses belajar dan eksplorasi adalah kunci untuk terus berkembang sebagai seorang desainer.
+</p>
+<p>
+    Instagram : @nimsa_art
+</p>
+<p>
+    Email : nimassekarayu358@gmail.com
 </p>
 </div>
 <div class="mt-10">
@@ -309,33 +317,45 @@
 <span class="w-14 h-14 flex items-center justify-center border border-border rounded-full bg-background hover:border-secondary transition-colors duration-150" title="Blender">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-text-secondary"><path d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626"/></svg>
 </span>
+<span class="w-14 h-14 flex items-center justify-center border border-border rounded-full bg-background hover:border-secondary transition-colors duration-150" title="IbisPaint X">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-text-secondary">
+<path d="M27.875 33.5a14.5 14.5 0 1 1 14.5-14.5a14.517 14.517 0 0 1-14.5 14.5m0-21a6.5 6.5 0 1 0 6.5 6.5a6.51 6.51 0 0 0-6.5-6.5"/>
+<path d="M21.375 31.957V39.5a4 4 0 0 1-8 0V19m-7 23.5V22"/>
+<circle cx="6.375" cy="19" r=".75" fill="currentColor" stroke="none"/>
+<path d="M27.875 25.5v8m-4.596-9.904l-5.657 5.657M21.375 19h-8m9.904-4.596l-5.657-5.657M27.875 12.5v-8m4.596 9.904l5.657-5.657M34.375 19h8m-9.904 4.596l5.657 5.657"/>
+</svg>
+</span>
 </div>
 </div>
 </div>
 <div class="hidden lg:grid lg:grid-cols-2 gap-4 h-auto lg:h-[600px] relative">
 <div class="flex flex-col gap-4 h-full">
-<div class="h-2/3 bg-background relative overflow-hidden">
+<div class="h-2/3 bg-background relative overflow-hidden rounded-xl">
 <img class="absolute inset-0 w-full h-full object-contain" src="section%20about%20me/gambar%202%20section%20about%20me.jpg"/>
 </div>
-<div class="h-1/3 bg-primary-container relative overflow-hidden">
+<div class="h-1/3 bg-primary-container relative overflow-hidden rounded-xl">
 <div class="absolute inset-0 flex items-center justify-center p-6 text-on-primary-container font-headline-lg text-headline-lg-mobile text-center">
                                Design is Intention.
                            </div>
 </div>
 </div>
 <div class="flex flex-col gap-4 h-full lg:pt-20">
-<div class="h-1/3 bg-surface-dim relative overflow-hidden">
+<div class="h-1/3 bg-surface-dim relative overflow-hidden rounded-xl">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20about%20me/gambar%203%20section%20about%20me.png"/>
 </div>
-<div class="h-2/3 bg-background relative overflow-hidden">
+<div class="h-2/3 bg-background relative overflow-hidden rounded-xl">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20about%20me/gambar%201%20section%20about%20me.jpeg"/>
 </div>
 </div>
-<div class="absolute -bottom-[250px] left-1/2 -translate-x-1/2 rotate-45 w-[140px] z-[60] pointer-events-none"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+<div class="absolute -bottom-[250px] left-1/2 -translate-x-1/2 rotate-45 w-[140px] z-20 pointer-events-none"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
 </div>
 
 </div>
 </section>
+<!-- Ornamen Bintang (perbatasan About - Karya, mobile) -->
+<div class="relative z-10 pointer-events-none md:hidden">
+<div class="absolute top-[30px] right-[20px] -translate-y-1/2 rotate-45 w-[110px]"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
+</div>
 <!-- Featured Works Section -->
 <section class="pt-4 pb-14 md:py-section-gap" id="works">
 <div class="relative bg-primary py-8 mb-14 md:mb-section-gap">
@@ -348,6 +368,7 @@
 <a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#ilustrasi">Ilustrasi</a>
 
 <a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#fotografi">Fotografi</a>
+<a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#editing-video">Editing Video</a>
 <a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#3d-model">3D Model</a>
 <a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#poster">Poster</a>
 <a class="px-5 py-2 border border-white rounded-full bg-transparent font-label-md text-label-md text-white hover:bg-white hover:text-primary hover:border-white transition-colors duration-150" href="#logo">Logo</a>
@@ -432,6 +453,9 @@
 <div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/14.jpeg" alt="Ilustrasi 14"/>
 </div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/ilustrasi/15.jpeg" alt="Ilustrasi 15"/>
+</div>
 </div>
 </section>
 <!-- Section Fotografi -->
@@ -494,6 +518,50 @@
 </div>
 </div>
 </section>
+<!-- Section Editing Video -->
+<section class="px-margin-mobile md:px-margin-desktop w-full" id="editing-video">
+<div class="mb-4 md:mb-8 flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-4xl md:text-5xl font-bold text-primary">EDITING VIDEO</h2>
+<div class="flex items-center gap-2">
+<button class="carousel-prev inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kiri"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="carousel-next inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface text-text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150" aria-label="Geser ke kanan"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="carousel-track flex gap-gutter overflow-x-auto no-scrollbar">
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1bo8pwfLEcm4VBMZf6cHasXPeH4aspihc/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%201.png" alt="Editing Video 1"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1u_yIwtctL33X8QfoGW_0f_ngnIrV-B-L/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%202.png" alt="Editing Video 2"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1Au4WqZft6sdPFioED3fvOjVMYBxfjPX5/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%203.png" alt="Editing Video 3"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1jBK3fzIsVLC-_ztLdMlOew92oQargTKG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%204.png" alt="Editing Video 4"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1OrFp5tF_ScAIzdHC4kn2MuX2G3ihnEBb/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%205.png" alt="Editing Video 5"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1fjpEy-HlGdFtdQdagv9rpUZ_A0LFU0Zu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%206.png" alt="Editing Video 6"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1Z4w5KVhhiLGjaWO61FN-EQwkBz8BNFz_/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%207.png" alt="Editing Video 7"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+<a class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-video relative bg-black border border-border rounded-xl overflow-hidden cursor-pointer" href="https://drive.google.com/file/d/1S7LacJAYjetlXTUjuDjIGMBo-f5X0Cmr/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="aspect-ratio: 16 / 9;">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/editing%20video/cover%208.png" alt="Editing Video 8"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><span class="material-symbols-outlined text-6xl text-white/90" style="text-shadow: 0 2px 12px rgba(0,0,0,0.65);">play_circle</span></div>
+</a>
+</div>
+</section>
 <!-- Section 3D Model -->
 <section class="px-margin-mobile md:px-margin-desktop w-full" id="3d-model">
 <div class="mb-4 md:mb-8 flex justify-between items-center">
@@ -539,6 +607,12 @@
 </div>
 <div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/5.jpeg" alt="Poster 5"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/6.png" alt="Poster 6"/>
+</div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/poster/7.png" alt="Poster 7"/>
 </div>
 </div>
 </section>
@@ -588,6 +662,9 @@
 <div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
 <img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/3.png" alt="Mockup 3"/>
 </div>
+<div class="carousel-slide snap-start shrink-0 w-[70%] md:w-[45%] lg:w-[32%] aspect-[4/3] relative bg-surface border border-border rounded-xl overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover" src="section%20karya%20saya/mock%20up/4.png" alt="Mockup 4"/>
+</div>
 </div>
 </section>
 </div>
@@ -595,13 +672,13 @@
 <!-- CTA Section -->
 <section class="relative py-14 md:py-section-gap px-margin-mobile md:px-margin-desktop text-center bg-primary border-t border-primary" id="contact">
 <h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-8 max-w-4xl mx-auto leading-tight text-shadow-xl">
-                Let's create something amazing together.
+                Mari membuat karya yang menakjubkan bersama
             </h2>
 <p class="font-body-md text-body-md text-white/80 mb-10 max-w-xl mx-auto">
                 Hubungi saya untuk mendiskusikan ide besar Anda berikutnya.
             </p>
 <button id="open-conversation" class="inline-flex items-center justify-center bg-[#f2c648] text-[#142759] px-10 py-5 rounded shadow-xl shadow-black/30 hover:opacity-90 transition-opacity duration-150 font-label-md text-label-md text-lg">
-                Let's Talk
+                Mari Berbincang
             </button>
 <div class="absolute right-0 top-0 -translate-y-1/2 md:top-1/2 md:-translate-y-[65%] translate-x-[25%] rotate-45 w-[140px] md:w-[280px] pointer-events-none"><img class="star-spin w-full h-full" src="bintang ornamen.png" alt=""/></div>
 </section>
@@ -609,18 +686,23 @@
 <!-- Footer Component -->
 <footer class="bg-surface dark:bg-surface-container-lowest border-t border-border dark:border-outline-variant full-width bottom w-full px-margin-mobile md:px-margin-desktop py-14 md:py-section-gap transition-all duration-150 ease-out flex flex-col md:flex-row justify-between items-center gap-8">
 <div class="w-full flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="font-headline-lg text-headline-lg text-text-primary dark:text-on-surface">
-                NIMAS SEKAR AYU
+            <div class="font-headline-lg text-headline-lg text-text-primary dark:text-on-surface">
+                <div class="md:hidden flex flex-col items-center">
+                    <div class="flex gap-6"><span>NIMAS</span><span>SEKAR</span></div>
+                    <div>AYU</div>
+                </div>
+                <span class="hidden md:inline">NIMAS SEKAR AYU</span>
             </div>
 <div class="font-body-md text-body-md text-text-primary dark:text-on-surface text-center md:text-right">
                 © 2026 NIMAS SEKAR AYU. Designed with intention.
             </div>
 </div>
 </footer>
-<div class="fixed inset-0 bg-primary/80 backdrop-blur-md flex items-center justify-center p-6 hidden overflow-hidden" id="lightbox">
+<div class="fixed inset-0 z-40 bg-primary/80 backdrop-blur-md flex items-center justify-center p-6 hidden overflow-hidden" id="lightbox">
 <button class="absolute top-6 right-6 text-on-primary text-4xl leading-none" id="lightbox-close" aria-label="Tutup"><span class="material-symbols-outlined">close</span></button>
 <img class="lightbox-zoomable max-w-[80vw] max-h-[70vh] object-contain rounded-lg cursor-zoom-in" id="lightbox-img" alt="Preview"/>
-<div class="absolute bottom-6 right-6 flex gap-2 z-10">
+<video class="hidden max-w-[90vw] max-h-[80vh] object-contain rounded-lg" id="lightbox-video" controls playsinline></video>
+<div class="absolute bottom-6 right-6 flex gap-2 z-10" id="lightbox-zoom-controls">
 <button class="bg-white/20 text-white px-3 py-2 rounded text-xl leading-none" id="zoom-in" aria-label="Perbesar">+</button>
 <button class="bg-white/20 text-white px-3 py-2 rounded text-xl leading-none" id="zoom-out" aria-label="Perkecil">-</button>
 <button class="bg-white/20 text-white px-3 py-2 rounded text-sm leading-none" id="zoom-reset">Reset</button>
@@ -629,7 +711,7 @@
 <!-- Conversation Modal -->
 <div class="fixed inset-0 bg-primary/80 backdrop-blur-md flex items-center justify-center p-6 hidden z-50" id="conversation-modal">
 <div class="bg-surface rounded-xl max-w-md w-full p-8 shadow-2xl">
-<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Let's talk.</h3>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Mari Berbincang.</h3>
 <form id="conversation-form" class="flex flex-col gap-4">
 <div>
 <label class="block font-label-md text-label-md text-text-primary mb-1" for="conv-nama">Nama</label>
@@ -718,12 +800,20 @@
         // Lightbox - show full image when a slide is clicked (delegation covers duplicated slides)
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        const zoomControls = document.getElementById('lightbox-zoom-controls');
         let scale = 1;
         function setZoom(value) {
             scale = Math.min(5, Math.max(1, value));
             lightboxImg.style.transform = scale === 1 ? '' : 'scale(' + scale + ')';
         }
         function openLightbox(src, alt) {
+            lightboxVideo.pause();
+            lightboxVideo.removeAttribute('src');
+            lightboxVideo.removeAttribute('poster');
+            lightboxVideo.classList.add('hidden');
+            lightboxImg.classList.remove('hidden');
+            zoomControls.classList.remove('hidden');
             lightboxImg.src = src;
             lightboxImg.alt = alt || 'Preview';
             setZoom(1);
@@ -731,7 +821,25 @@
             document.body.classList.add('lightbox-open');
             document.body.style.overflow = 'hidden';
         }
+        function openVideoLightbox(src, poster) {
+            lightboxImg.classList.add('hidden');
+            lightboxImg.removeAttribute('src');
+            zoomControls.classList.add('hidden');
+            lightboxVideo.classList.remove('hidden');
+            if (poster) lightboxVideo.setAttribute('poster', poster);
+            lightboxVideo.src = src;
+            lightbox.classList.remove('hidden');
+            document.body.classList.add('lightbox-open');
+            document.body.style.overflow = 'hidden';
+            lightboxVideo.play().catch(() => {});
+        }
         function closeLightbox() {
+            lightboxVideo.pause();
+            lightboxVideo.removeAttribute('src');
+            lightboxVideo.removeAttribute('poster');
+            lightboxVideo.classList.add('hidden');
+            lightboxImg.classList.remove('hidden');
+            zoomControls.classList.remove('hidden');
             setZoom(1);
             lightbox.classList.add('hidden');
             document.body.classList.remove('lightbox-open');
@@ -739,10 +847,15 @@
         }
         document.addEventListener('click', (e) => {
             const slide = e.target.closest('.carousel-slide');
-            if (slide) {
-                const img = slide.querySelector('img');
-                if (img) openLightbox(img.src, img.alt);
+            if (!slide) return;
+            if (slide.tagName === 'A') return;
+            const video = slide.querySelector('video');
+            if (video) {
+                openVideoLightbox(video.getAttribute('src'), video.getAttribute('poster'));
+                return;
             }
+            const img = slide.querySelector('img');
+            if (img) openLightbox(img.src, img.alt);
         });
         document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', (e) => {
